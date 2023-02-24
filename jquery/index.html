@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#buttonpertama").click(function () {
+                alert("berhasil di click")
+            })
+            $(".buttonkedua").click(function () {
+                alert("button kedua berhasil di click")
+            })
+
+            $("#inputpertama").change(function(){
+                console.log("<<<<<<< ini test")
+                console.log($("#inputpertama").val())
+                $("#inputkedua").val($("inputpertama").val())
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <h1>ini adalah halaman uuntuk belajar jquery</h1>
+    <button id="buttonpertama">klik aku</button>
+    <button class="buttonkedua">ini adalah button kedua</button>
+
+    <form action="">
+        <label for="">input pertama</label>
+        <input id="inputpertama" type="text">
+        <label for="">input kedua</label>
+        <input id="inputkedua" type="text">
+    </form>
+</body>
+
+</html>
